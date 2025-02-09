@@ -1,0 +1,9 @@
+﻿FUNCTION "Test" : Void
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+
+BEGIN
+	//HI _github test
+	//
+END_FUNCTION
+
