@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V18" />
+  <SW.Blocks.FC ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+  <Section Name="Return">
+    <Member Name="Ret_Val" Datatype="Void" Accessibility="Public" />
+  </Section>
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <Name>pump RPM</Name>
+      <Namespace />
+      <Number>28</Number>
+      <ProgrammingLanguage>LAD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-GB</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>sv-SE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="5" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <Access Scope="GlobalVariable" UId="21">
+    <Symbol UId="22">
+      <Component Name="RPM" UId="23">
+        <BooleanAttribute Name="HasQuotes" UId="24">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="25" />
+      <Component Name="A" UId="26" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="27" />
+  <Token Text=":=" UId="28" />
+  <Blank Num="1" UId="29" />
+  <Token Text="(" UId="30" />
+  <Token Text="(" UId="31" />
+  <Access Scope="Call" UId="32">
+    <Instruction Name="DINT_TO_REAL" UId="33">
+      <Token Text="(" UId="34" />
+      <NamelessParameter UId="35">
+        <Access Scope="GlobalVariable" UId="36">
+          <Symbol UId="37">
+            <Component Name="RPM PUMP A" UId="38" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="40" />
+    </Instruction>
+  </Access>
+  <Token Text=")" UId="41" />
+  <Blank Num="1" UId="42" />
+  <Token Text="/" UId="43" />
+  <Blank Num="1" UId="44" />
+  <Access Scope="GlobalVariable" UId="45">
+    <Symbol UId="46">
+      <Component Name="Pump &amp; Flowrate" UId="47" />
+      <Token Text="." UId="48" />
+      <Component Name="Pump A" UId="49" />
+      <Token Text="." UId="50" />
+      <Component Name="speed sensor impulse" UId="51" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="52" />
+  <Blank Num="1" UId="53" />
+  <Token Text="*" UId="54" />
+  <Blank Num="1" UId="55" />
+  <Access Scope="LiteralConstant" UId="56">
+    <Constant UId="57">
+      <ConstantValue UId="59">60.0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="60" />
+  <NewLine Num="1" UId="61" />
+  <Access Scope="GlobalVariable" UId="62">
+    <Symbol UId="63">
+      <Component Name="RPM" UId="64">
+        <BooleanAttribute Name="HasQuotes" UId="65">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="66" />
+      <Component Name="B" UId="67" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="68" />
+  <Token Text=":=" UId="69" />
+  <Blank Num="1" UId="70" />
+  <Token Text="(" UId="71" />
+  <Token Text="(" UId="72" />
+  <Access Scope="Call" UId="73">
+    <Instruction Name="DINT_TO_REAL" UId="74">
+      <Token Text="(" UId="75" />
+      <NamelessParameter UId="76">
+        <Access Scope="GlobalVariable" UId="77">
+          <Symbol UId="78">
+            <Component Name="RPM PUMP B" UId="79" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="81" />
+    </Instruction>
+  </Access>
+  <Token Text=")" UId="82" />
+  <Blank Num="1" UId="83" />
+  <Token Text="/" UId="84" />
+  <Blank Num="1" UId="85" />
+  <Access Scope="GlobalVariable" UId="86">
+    <Symbol UId="87">
+      <Component Name="Pump &amp; Flowrate" UId="88" />
+      <Token Text="." UId="89" />
+      <Component Name="Pump B" UId="90" />
+      <Token Text="." UId="91" />
+      <Component Name="speed sensor impulse" UId="92" />
+    </Symbol>
+  </Access>
+  <Token Text=")" UId="93" />
+  <Blank Num="1" UId="94" />
+  <Token Text="*" UId="95" />
+  <Blank Num="1" UId="96" />
+  <Access Scope="LiteralConstant" UId="97">
+    <Constant UId="98">
+      <ConstantValue UId="100">60.0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="101" />
+  <NewLine Num="2" UId="102" />
+  <Access Scope="GlobalVariable" UId="103">
+    <Symbol UId="104">
+      <Component Name="RPM" UId="105">
+        <BooleanAttribute Name="HasQuotes" UId="106">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="107" />
+      <Component Name="a selected" UId="108" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="109" />
+  <Token Text=":=" UId="110" />
+  <Blank Num="1" UId="111" />
+  <Token Text="(" UId="112" />
+  <Access Scope="GlobalVariable" UId="113">
+    <Symbol UId="114">
+      <Component Name="RPM" UId="115">
+        <BooleanAttribute Name="HasQuotes" UId="116">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="117" />
+      <Component Name="speed sensor selection A" UId="118" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="119" />
+  <Token Text="=" UId="120" />
+  <Blank Num="1" UId="121" />
+  <Access Scope="LiteralConstant" UId="122">
+    <Constant UId="123">
+      <ConstantValue UId="125">1</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=")" UId="126" />
+  <Token Text=";" UId="127" />
+  <NewLine Num="1" UId="128" />
+  <Access Scope="GlobalVariable" UId="129">
+    <Symbol UId="130">
+      <Component Name="RPM" UId="131">
+        <BooleanAttribute Name="HasQuotes" UId="132">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="133" />
+      <Component Name="b selected" UId="134" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="135" />
+  <Token Text=":=" UId="136" />
+  <Blank Num="1" UId="137" />
+  <Token Text="(" UId="138" />
+  <Access Scope="GlobalVariable" UId="139">
+    <Symbol UId="140">
+      <Component Name="RPM" UId="141">
+        <BooleanAttribute Name="HasQuotes" UId="142">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="143" />
+      <Component Name="speed sensor selection B" UId="144" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="145" />
+  <Token Text="=" UId="146" />
+  <Blank Num="1" UId="147" />
+  <Access Scope="LiteralConstant" UId="148">
+    <Constant UId="149">
+      <ConstantValue UId="151">1</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=")" UId="152" />
+  <Token Text=";" UId="153" />
+  <NewLine Num="1" UId="154" />
+  <Access Scope="GlobalVariable" UId="155">
+    <Symbol UId="156">
+      <Component Name="RPM" UId="157">
+        <BooleanAttribute Name="HasQuotes" UId="158">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="159" />
+      <Component Name="ab selected" UId="160" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="161" />
+  <Token Text=":=" UId="162" />
+  <Blank Num="1" UId="163" />
+  <Access Scope="GlobalVariable" UId="164">
+    <Symbol UId="165">
+      <Component Name="RPM" UId="166">
+        <BooleanAttribute Name="HasQuotes" UId="167">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="168" />
+      <Component Name="a selected" UId="169" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="170" />
+  <Token Text="OR" UId="171" />
+  <Blank Num="1" UId="172" />
+  <Access Scope="GlobalVariable" UId="173">
+    <Symbol UId="174">
+      <Component Name="RPM" UId="175">
+        <BooleanAttribute Name="HasQuotes" UId="176">true</BooleanAttribute>
+      </Component>
+      <Token Text="." UId="177" />
+      <Component Name="b selected" UId="178" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="179" />
+  <NewLine Num="1" UId="180" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="6" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-GB</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="8" CompositionName="Items">
+                <AttributeList>
+                  <Culture>sv-SE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="A" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-GB</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>sv-SE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="E" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="F" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-GB</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="10" CompositionName="Items">
+            <AttributeList>
+              <Culture>sv-SE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="11" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FC>
+</Document>
